@@ -105,8 +105,7 @@ Maestría en Ciencias con Mención en Inteligencia Artificial – Universidad Na
 
 ---
 
-*Estado actual del proyecto: Fase de planificación y diseño — Inicio de ejecución: Octubre 2026*
-7. ## Dataset
+*Estado actual del proyecto: Fase de planificación y diseño — Inicio de ejecución: 10 de mayo de 2026*
 
 Las imágenes han sido capturadas directamente en el Bosque El Olivar, con registro de georreferenciación, en condiciones reales de campo, considerando variación de iluminación y diferentes posiciones de hoja en el árbol: alta, media y baja.
 
@@ -115,7 +114,7 @@ Las imágenes han sido capturadas directamente en el Bosque El Olivar, con regis
 
 | Nombre | Usuario GitHub | Correo |
 |---|---|---|
-| Gabriela Graciela Villegas Vasquez | @ggvvzza | ggvvzza@gmail.com |
+| Gabriela Graciela Villegas Vasquez | @ggvvzza |  ggvvareasverdes2021@gmail.com|
 
 ---
 
