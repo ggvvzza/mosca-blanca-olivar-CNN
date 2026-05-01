@@ -111,3 +111,103 @@ Maestría en Ciencias con Mención en Inteligencia Artificial – Universidad Na
 Las imágenes han sido capturadas directamente en el Bosque El Olivar, con registro de georreferenciación, en condiciones reales de campo, considerando variación de iluminación y diferentes posiciones de hoja en el árbol: alta, media y baja.
 
 *Dataset en construcción — inicio de colecta programado: Diciembre 2026*
+## Autores
+
+| Nombre | Usuario GitHub | Correo |
+|---|---|---|
+| Gabriela Graciela Villegas Vasquez | @ggvvzza | ggvvzza@gmail.com |
+
+---
+
+## Requisitos
+
+Para ejecutar el pipeline se requiere Python 3.8 o superior. Las dependencias del proyecto se instalan con:
+Las principales dependencias son:
+
+- ultralytics (YOLOv8)
+- opencv-python
+- torch
+- torchvision
+- sahi
+- Pillow
+- matplotlib
+- numpy
+
+---
+
+## Como ejecutar el pipeline
+
+1. **Ingesta de datos**
+Organiza y verifica las imagenes disponibles en data/raw/
+
+2. **Preprocesamiento**
+Redimensiona, normaliza y filtra imagenes. Guarda resultados en data/processed/
+
+3. **Exploracion inicial**
+
+Abrir y ejecutar el notebook notebooks/EDA_basico.ipynb
+
+4. **Entrenamiento del modelo**
+5. Entrena YOLOv8s con transferencia de aprendizaje sobre el dataset etiquetado.
+
+---
+
+## Resultados esperados
+
+El pipeline genera los siguientes resultados minimos:
+
+- Resumen estadistico del dataset: numero de imagenes por clase, distribucion de tamaños
+- Graficas de distribucion de imagenes infestadas vs sanas
+- Metricas iniciales del modelo: precision, recall, F1-score y mAP@0.5
+- Logs de entrenamiento guardados en logs/
+
+*Resultados disponibles a partir de: Abril 2027*
+## Requisitos
+
+Para ejecutar el pipeline se requiere Python 3.8 o superior. Las principales dependencias son:
+
+- ultralytics (YOLOv8)
+- opencv-python
+- torch
+- torchvision
+- sahi
+- Pillow
+- matplotlib
+- numpy
+
+Para instalar todas las dependencias ejecutar:
+
+    pip install -r requirements.txt
+    ## Como ejecutar el pipeline
+
+1. Ingesta de datos
+
+        python src/ingesta.py
+
+Organiza y verifica las imagenes disponibles en data/raw/
+
+2. Preprocesamiento
+
+        python src/preprocesamiento.py
+
+Redimensiona, normaliza y filtra imagenes. Guarda resultados en data/processed/
+
+3. Exploracion inicial
+
+Abrir y ejecutar el notebook notebooks/EDA_basico.ipynb
+
+4. Entrenamiento del modelo
+
+        python src/entrenamiento_yolov8.py
+
+Entrena YOLOv8s con transferencia de aprendizaje sobre el dataset etiquetado.
+## Resultados esperados
+
+El pipeline genera los siguientes resultados minimos:
+
+- Resumen estadistico del dataset: numero de imagenes por clase y distribucion de tamaños
+- Graficas de distribucion de imagenes infestadas vs sanas
+- Metricas iniciales del modelo: precision, recall, F1-score y mAP@0.5
+- Logs de entrenamiento guardados en logs/
+
+*Resultados disponibles a partir de: Abril 2027*
