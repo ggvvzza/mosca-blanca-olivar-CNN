@@ -1,8 +1,0 @@
-ultralytics==8.0.196
-opencv-python==4.8.1.78
-torch==2.1.0
-torchvision==0.16.0
-sahi==0.11.15
-Pillow==10.0.1
-matplotlib==3.8.0
-numpy==1.24.3
