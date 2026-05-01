@@ -210,3 +210,24 @@ El pipeline genera los siguientes resultados minimos:
 - Logs de entrenamiento guardados en logs/
 
 *Resultados disponibles a partir de: Abril 2027*
+## Fuentes del Dataset
+
+### Dataset primario — captura propia en campo
+
+Imagenes capturadas directamente en el Bosque El Olivar, San Isidro, Lima, Peru.
+Registro de georreferenciacion por imagen. Condiciones reales de campo.
+Total actual: 53 imagenes propias.
+
+### Dataset complementario — fuente publica
+
+Para ampliar el volumen del dataset se utilizara como complemento el siguiente conjunto de datos publico:
+
+- Nombre: Pest Dataset V2
+- Fuente: Kaggle
+- Autor: Ibrahima Gabar Diop
+- Enlace: https://www.kaggle.com/datasets/ibrahimagabardiop/pestaidatasetv2
+- Licencia: CC0 Dominio publico
+- Clases relevantes para este proyecto: mosca blanca
+- Total de archivos: 34,200 imagenes en 16 clases
+
+Solo se utilizaran las imagenes correspondientes a la clase mosca blanca como complemento al dataset primario capturado en campo.
