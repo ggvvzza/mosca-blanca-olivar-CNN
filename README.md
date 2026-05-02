@@ -65,13 +65,13 @@ El modelo será evaluado con las siguientes métricas estándar en detección de
 
 | N° | Etapa | Actividades Principales | Periodo |
 |---|---|---|---|
-| 1 | Habilitación de equipo y herramientas | Listado de materiales y herramientas de trabajo | Octubre 2026 |
-| 2 | Diseño y planificación | Revisión bibliográfica, diseño del pipeline de datos y arquitectura del modelo | Octubre – Noviembre 2026 |
-| 3 | Colecta y preparación de datos | Toma de imágenes en campo, etiquetado, preprocesamiento y aumento de datos | Diciembre 2026 – Enero 2027 |
-| 4 | Implementación del modelo | Entrenamiento de YOLOv8s con SAHI, ajuste de hiperparámetros, pruebas iniciales | Febrero – Marzo 2027 |
-| 5 | Validación experimental | Evaluación con K-Fold, bootstrapping y comparación con inspección visual | Abril – Mayo 2027 |
-| 6 | Análisis y documentación | Interpretación de resultados, redacción de capítulos, elaboración de conclusiones | Junio 2027 |
-| 7 | Presentación y sustentación | Revisión y preparación del informe final | Julio 2027 |
+| 1 | Habilitación de equipo y herramientas | Listado de materiales y herramientas de trabajo | mayo 2026 |
+| 2 | Diseño y planificación | Revisión bibliográfica, diseño del pipeline de datos y arquitectura del modelo | junio – julio 2026 |
+| 3 | Colecta y preparación de datos | Toma de imágenes en campo, etiquetado, preprocesamiento y aumento de datos | julio 2026 – agosto 2026 |
+| 4 | Implementación del modelo | Entrenamiento de YOLOv8s con SAHI, ajuste de hiperparámetros, pruebas iniciales | agosto 2026 |
+| 5 | Validación experimental | Evaluación con K-Fold, bootstrapping y comparación con inspección visual | Abril – agosto 2026 |
+| 6 | Análisis y documentación | Interpretación de resultados, redacción de capítulos, elaboración de conclusiones | setiembre 2026 |
+| 7 | Presentación y sustentación | Revisión y preparación del informe final | octubre 2026 |
 
 ## Metodología
 
