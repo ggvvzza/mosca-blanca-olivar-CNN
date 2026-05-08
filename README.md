@@ -25,8 +25,7 @@
 | Baseline (DummyClassifier) | 1.00* | 1.00* | 1.00* | 1.00* |
 | Baseline (Reg. Logística) | 0.87 | 0.93 | 0.90 | 0.93 |
 | Variante 1 (HOG + SVM) | Pendiente | Pendiente | Pendiente | Pendiente |
-| Variante 2 (ResNet50) | Pendiente | Pendiente | Pendiente | Pendiente |
-
+| Variante 2 (ResNet50) | 0.96 | 0.67 | 0.98 | 0.96 |
 *Resultado esperado con dataset de una sola clase.
 
 ### Riesgos Identificados
