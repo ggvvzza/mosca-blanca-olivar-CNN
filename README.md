@@ -29,10 +29,9 @@
 *Resultado esperado con dataset de una sola clase.
 
 ### Riesgos Identificados
-1. **Desbalance de clases**: 210 infestadas vs 0 sanas → captura en progreso
-2. **Tamaño heterogéneo**: 128px a 408px → estandarizar a 640x640px
-3. **Variabilidad de iluminación**: fotos en diferentes horas del día → normalización
-
+1. Tengo más fotos infestadas que sanas (210 vs 27), necesito más fotos sanas
+2. Las fotos tienen diferentes tamaños, hay que ajustarlas antes de entrenar
+3. Las fotos fueron tomadas a diferentes horas, la luz varía mucho
 ### Próximos Pasos
 1. Capturar mínimo 100 imágenes de hojas sanas
 2. Reentrenar baseline con clasificación binaria real
