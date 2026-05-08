@@ -9,8 +9,8 @@
 | Clase | Imágenes | Estado |
 |-------|----------|--------|
 | Infestadas | 210 | ✅ Completo |
-| Sanas | 0 | ⏳ Pendiente captura |
-| **Total** | **210** | En progreso |
+| Sanas | 27 | ✅ Cargadas (parcial) |
+| **Total** | **237** | En progreso |
 
 ### EDA Completado
 - ✅ Conteo y distribución de clases
