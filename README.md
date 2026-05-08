@@ -23,6 +23,7 @@
 | Modelo | Precision | Recall | F1 | Accuracy |
 |--------|-----------|--------|----|----------|
 | Baseline (DummyClassifier) | 1.00* | 1.00* | 1.00* | 1.00* |
+| Baseline (Reg. Logística) | 0.87 | 0.93 | 0.90 | 0.93 |
 | Variante 1 (HOG + SVM) | Pendiente | Pendiente | Pendiente | Pendiente |
 | Variante 2 (ResNet50) | Pendiente | Pendiente | Pendiente | Pendiente |
 
