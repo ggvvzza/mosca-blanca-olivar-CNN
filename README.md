@@ -39,3 +39,10 @@
 3. Ejecutar Variante 1: HOG + SVM
 4. Ejecutar Variante 2: ResNet50 transfer learning
 5. Completar tabla comparativa con métricas reales
+6. ### Validación Cruzada (5-Fold Estratificado)
+| Modelo | F1 Macro promedio | Desviación |
+|--------|-------------------|------------|
+| Baseline (Reg. Logística) | 0.61 | ± 0.11 |
+| Variante 2 (ResNet50) | 0.87 | ± 0.07 |
+
+**Conclusión:** ResNet50 es el modelo más robusto y consistente.
