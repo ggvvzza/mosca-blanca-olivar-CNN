@@ -1,233 +1,127 @@
-# Detección Temprana de Mosca Blanca en Olivos del Bosque El Olivar mediante Visión Artificial
-
-**Universidad Nacional de Ingeniería – Unidad de Postgrado FIIS**  
-**Maestría en Ciencias con Mención en Inteligencia Artificial**  
+# Detección Temprana de Mosca Blanca en Olivos del Bosque El Olivar
+## Universidad Nacional de Ingeniería – Maestría en IA
 **Autora:** Gabriela Graciela Villegas Vasquez  
-**Lugar de estudio:** Bosque El Olivar, Distrito de San Isidro, Lima – Perú  
-**Duración estimada:** mayo 2026 – diciembre 2027
-
-## Descripción del Proyecto
-
-Este proyecto de investigación propone el diseño de un sistema de visión artificial basado en Redes Neuronales Convolucionales (CNN) para la detección temprana de la mosca blanca (*Aleurothrixus floccosus*) en olivos (*Olea europaea*) del Bosque El Olivar de San Isidro, Lima – Perú.
-
-El Bosque El Olivar es un ecosistema urbano patrimonial sujeto a restricciones estrictas en el uso de productos químicos de síntesis. La detección temprana automatizada de plagas permite optimizar las estrategias de control biológico y preservar el equilibrio ecológico del bosque urbano.
+**Lugar:** Bosque El Olivar, San Isidro, Lima – Perú  
+**Duración:** Mayo 2026 – Julio 2027
 
 ---
 
-## Objetivos
+## ¿De qué trata este proyecto?
 
-### Objetivo General
+Estoy desarrollando mi tesis de maestría en la UNI. El objetivo es crear un sistema que pueda detectar automáticamente la mosca blanca (*Aleurothrixus floccosus*) en los olivos del Bosque El Olivar de San Isidro, usando inteligencia artificial y visión por computadora.
 
-Diseñar un sistema de visión artificial basado en redes neuronales convolucionales (CNN) para la detección temprana de la mosca blanca (*Aleurothrixus floccosus*) en olivos (*Olea europaea*) del Bosque El Olivar, Lima – Perú.
+Trabajo en el Bosque El Olivar como especialista en cultivo de olivo, y vi que detectar esta plaga a tiempo es muy difícil porque hay que revisar árbol por árbol manualmente. Quiero que un modelo de IA pueda ayudar con eso.
 
-### Objetivos Específicos
+---
 
-- Construir un conjunto de datos de imágenes de hojas de olivo con y sin presencia de mosca blanca, capturadas en condiciones reales de campo.
-- Identificar y analizar características visuales relevantes asociadas a infestaciones tempranas.
-- Entrenar y evaluar un modelo YOLOv8s mediante transferencia de aprendizaje.
-- Comparar el desempeño del sistema propuesto con el diagnóstico visual tradicional.
-- Evaluar la viabilidad de replicar el sistema en otros espacios verdes urbanos.
+## ¿Por qué es importante?
 
-- ## Planteamiento del Problema
+El Bosque El Olivar es un patrimonio histórico de Lima. No se pueden usar pesticidas fuertes ahí, así que hay que detectar la plaga temprano para aplicar control biológico a tiempo. Actualmente la detección se hace a ojo, lo cual depende mucho de la experiencia de la persona que revisa.
 
-La identificación actual de mosca blanca en el Bosque El Olivar se basa en inspecciones visuales manuales realizadas por personal técnico en campo. Este enfoque presenta limitaciones vinculadas a la subjetividad del observador, la variabilidad en la experiencia del evaluador y la dificultad para detectar infestaciones en estadios tempranos, cuando los síntomas visibles aún no son evidentes.
+---
 
-La detección tardía incrementa el riesgo de expansión poblacional de la plaga y retrasa la liberación oportuna de controladores biológicos, que constituye una de las principales estrategias permitidas dentro del Bosque El Olivar. Existe, por tanto, una brecha tecnológica entre las necesidades reales del manejo fitosanitario urbano y las herramientas actualmente disponibles.
+## ¿Qué estoy usando?
 
-## Tecnologías Utilizadas
+| Herramienta | Para qué la uso |
+|-------------|-----------------|
+| YOLOv8s | Modelo principal de detección |
+| SAHI | Para detectar mejor objetos pequeños como la mosca blanca |
+| PyTorch | Framework de deep learning |
+| OpenCV | Procesamiento de imágenes |
+| Raspberry Pi | Para probar el sistema en campo |
+| Python | Lenguaje principal |
 
+---
 
-| Herramienta | Uso |
-|---|---|
-| YOLOv8s | Modelo principal de detección de objetos en tiempo real |
-| SAHI (Slicing Aided Hyper Inference) | Mejora de detección de objetos pequeños en imágenes grandes |
-| PyTorch | Framework de aprendizaje profundo |
-| OpenCV | Procesamiento y análisis de imágenes |
-| Raspberry Pi | Implementación en campo de bajo costo |
-| Python | Lenguaje de programación principal |
+## ¿Cómo voy a evaluar si el modelo funciona bien?
 
-## Métricas de Evaluación
-
-
-El modelo será evaluado con las siguientes métricas estándar en detección de objetos:
-
-| Métrica | Descripción |
-|---|---|
-| mAP@0.5 | Precisión promedio al umbral de IoU = 0.5 |
-| mAP@0.5:0.95 | Precisión promedio en múltiples umbrales de IoU |
-| Precisión | Exactitud de las detecciones realizadas por el sistema |
-| Recall | Capacidad del modelo para detectar la totalidad de plagas presentes |
+| Métrica | Qué mide |
+|---------|----------|
+| mAP@0.5 | Precisión promedio del modelo |
+| mAP@0.5:0.95 | Precisión en diferentes umbrales |
+| Precision | Qué tan exactas son las detecciones |
+| Recall | Cuántas plagas logra detectar |
 | F1-score | Balance entre precisión y recall |
-| Tiempo de inferencia (ms) | Viabilidad del sistema para aplicaciones en tiempo real en campo |
+| Tiempo de inferencia (ms) | Si funciona en tiempo real en campo |
+
+---
+
+## Mis datos
+
+Tomé las fotos yo misma en el Bosque El Olivar, con registro de georeferenciación. Las fotos fueron tomadas en diferentes horas del día y en diferentes posiciones de la hoja (alta, media y baja en el árbol).
+
+**Estado actual del dataset:**
+- Imágenes infestadas: 210
+- Imágenes sanas: 27 (en proceso de captura)
+- Total: 237 imágenes reales de campo
+
+Como complemento, voy a usar imágenes públicas del dataset Pest Dataset V2 (Kaggle, autor: Ibrahima Gabar Diop, licencia CC0), solo la clase mosca blanca.
+
+---
+
+## Estructura del repositorio
+mosca-blanca-olivar-CNN/
+├── cuadernos/
+│   ├── EDA_basico.ipynb
+│   └── ingesta_dataset_v0.py
+├── datos/
+├── documentos/
+├── registros/
+├── resultados/
+├── src/
+└── LÉAME.md
+## Cómo correr el notebook
+
+1. Abrir Google Colab
+2. Conectar Google Drive
+3. Abrir `cuadernos/EDA_basico.ipynb`
+4. Ejecutar todas las celdas
+
+---
+
+## Lo que ya hice
+
+- ✅ Captura de 210 imágenes infestadas en campo
+- ✅ Análisis exploratorio del dataset (EDA completo)
+- ✅ Análisis de dimensiones y canales RGB
+- ✅ Baseline con Regresión Logística
+- ✅ Variante 1: HOG + SVM
+- ✅ Variante 2: ResNet50 Transfer Learning
+- ✅ Validación cruzada 5-Fold estratificado
+
+## Lo que falta
+
+- ⏳ Completar captura de imágenes sanas (meta: 100)
+- ⏳ Etiquetado con bounding boxes
+- ⏳ Entrenamiento YOLOv8s
+- ⏳ Validación final y comparación con inspección visual
+
+---
 
 ## Cronograma
 
-
-| N° | Etapa | Actividades Principales | Periodo |
-|---|---|---|---|
-| 1 | Habilitación de equipo y herramientas | Listado de materiales y herramientas de trabajo | mayo 2026 |
-| 2 | Diseño y planificación | Revisión bibliográfica, diseño del pipeline de datos y arquitectura del modelo | junio – julio 2026 |
-| 3 | Colecta y preparación de datos | Toma de imágenes en campo, etiquetado, preprocesamiento y aumento de datos | julio 2026 – agosto 2026 |
-| 4 | Implementación del modelo | Entrenamiento de YOLOv8s con SAHI, ajuste de hiperparámetros, pruebas iniciales | agosto 2026 |
-| 5 | Validación experimental | Evaluación con K-Fold, bootstrapping y comparación con inspección visual | Abril – agosto 2026 |
-| 6 | Análisis y documentación | Interpretación de resultados, redacción de capítulos, elaboración de conclusiones | setiembre 2026 |
-| 7 | Presentación y sustentación | Revisión y preparación del informe final | octubre 2026 |
-
-## Metodología
-
-
-La investigación se enmarca en un enfoque de investigación tecnológica aplicada, con una metodología híbrida que combina principios de Agile+AI para la gestión iterativa del desarrollo y prácticas de MLOps (Machine Learning Operations) para integrar, validar y desplegar el modelo de manera eficiente y reproducible.
-
-El pipeline de datos comprende las siguientes etapas:
-
-1. **Captura de imágenes en campo:** hojas de olivo con y sin presencia de mosca blanca, en condiciones reales del Bosque El Olivar, incluyendo variaciones de iluminación, sombra y orientación.
-2. **Preprocesamiento:** redimensionamiento, normalización y control de calidad de imágenes.
-3. **Anotación:** etiquetado manual mediante cajas delimitadoras (bounding boxes).
-4. **Aumento de datos:** rotación, variación de brillo, contraste y técnica de mosaico.
-5. **Entrenamiento:** YOLOv8s con transferencia de aprendizaje y complemento SAHI.
-6. **Validación:** partición Hold-out (entrenamiento / validación / prueba).
-
-## Referencias Bibliográficas
-
-- Feng, Z., Wang, N., Jin, Y., Cao, H., Huang, X., Wen, S., & Ding, M. (2024). Enhancing cotton whitefly (*Bemisia tabaci*) detection and counting with a cost-effective deep learning approach on the Raspberry Pi. *Plant Methods*, 20(161).
-- Tusubira, J. F., Nsumba, S., Ninsiima, F., Akera, B., Acellam, G., Nakatumba, J., Mwebaze, E., Quinn, J., & Oyana, T. (2020). Improving in-field cassava whitefly pest surveillance with machine learning. *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)*, 1–10.
-- Chand, L., Dhiman, A. S., & Singh, S. (2022). Detection of whitefly pests in crops employing image enhancement and machine learning. *International Journal of Advanced Technology and Engineering Exploration*, 10(102), 569–579.
-- Bellout, A., Zarboubi, M., Dliou, A., Latif, R., & Saddik, A. (2024). Advanced YOLO models for real-time detection of tomato leaf diseases. *Mathematical Modeling and Computing*, 11(4), 1198–1210.
-- Zhang, X., Bu, J., Zhou, X., & Wang, X. (2023). Automatic pest identification system in the greenhouse based on deep learning and machine vision. *Frontiers in Plant Science*, 14, 1255719.
+| N° | Etapa | Periodo |
+|----|-------|---------|
+| 1 | Habilitación de equipos | Mayo 2026 |
+| 2 | Diseño y planificación | Junio – Julio 2026 |
+| 3 | Captura y preparación de datos | Julio – Agosto 2026 |
+| 4 | Entrenamiento del modelo | Agosto 2026 |
+| 5 | Validación experimental | Setiembre – Octubre 2026 |
+| 6 | Análisis y documentación | Noviembre 2026 |
+| 7 | Presentación y sustentación | Diciembre 2026 – Julio 2027 |
 
 ---
 
-## Autora
+## Referencias
 
-Ing. Agrónoma Gabriela Graciela Villegas Vasquez  
-Especialista en Cultivo de Olivo – Bosque El Olivar, Municipalidad de San Isidro  
-Maestría en Ciencias con Mención en Inteligencia Artificial – Universidad Nacional de Ingeniería  
-
----
-
-*Estado actual del proyecto: Fase de planificación y diseño — Inicio de ejecución: 10 de mayo de 2026*
-
-Las imágenes han sido capturadas directamente en el Bosque El Olivar, con registro de georreferenciación, en condiciones reales de campo, considerando variación de iluminación y diferentes posiciones de hoja en el árbol: alta, media y baja.
-
-*Dataset en construcción — inicio de colecta programado: Diciembre 2026*
-## Autores
-
-| Nombre | Usuario GitHub | Correo |
-|---|---|---|
-| Gabriela Graciela Villegas Vasquez | @ggvvzza |  ggvvareasverdes2021@gmail.com|
+- Feng et al. (2024). Enhancing cotton whitefly detection with deep learning on Raspberry Pi. *Plant Methods*, 20(161).
+- Tusubira et al. (2020). Improving cassava whitefly surveillance with machine learning. *CVPRW*.
+- Chand et al. (2022). Detection of whitefly pests using image enhancement and machine learning. *IJAEE*, 10(102).
+- Bellout et al. (2024). Advanced YOLO models for tomato leaf disease detection. *Mathematical Modeling and Computing*, 11(4).
+- Zhang et al. (2023). Automatic pest identification in greenhouse using deep learning. *Frontiers in Plant Science*, 14.
 
 ---
 
-## Requisitos
-
-Para ejecutar el pipeline se requiere Python 3.8 o superior. Las dependencias del proyecto se instalan con:
-Las principales dependencias son:
-
-- ultralytics (YOLOv8)
-- opencv-python
-- torch
-- torchvision
-- sahi
-- Pillow
-- matplotlib
-- numpy
-
----
-
-## Como ejecutar el pipeline
-
-1. **Ingesta de datos**
-Organiza y verifica las imagenes disponibles en data/raw/
-
-2. **Preprocesamiento**
-Redimensiona, normaliza y filtra imagenes. Guarda resultados en data/processed/
-
-3. **Exploracion inicial**
-
-Abrir y ejecutar el notebook notebooks/EDA_basico.ipynb
-
-4. **Entrenamiento del modelo**
-5. Entrena YOLOv8s con transferencia de aprendizaje sobre el dataset etiquetado.
-
----
-
-## Resultados esperados
-
-El pipeline genera los siguientes resultados minimos:
-
-- Resumen estadistico del dataset: numero de imagenes por clase, distribucion de tamaños
-- Graficas de distribucion de imagenes infestadas vs sanas
-- Metricas iniciales del modelo: precision, recall, F1-score y mAP@0.5
-- Logs de entrenamiento guardados en logs/
-
-*Resultados disponibles a partir de: Abril 2027*
-## Requisitos
-
-Para ejecutar el pipeline se requiere Python 3.8 o superior. Las principales dependencias son:
-
-- ultralytics (YOLOv8)
-- opencv-python
-- torch
-- torchvision
-- sahi
-- Pillow
-- matplotlib
-- numpy
-
-Para instalar todas las dependencias ejecutar:
-
-    pip install -r requirements.txt
-    ## Como ejecutar el pipeline
-
-1. Ingesta de datos
-
-        python src/ingesta.py
-
-Organiza y verifica las imagenes disponibles en data/raw/
-
-2. Preprocesamiento
-
-        python src/preprocesamiento.py
-
-Redimensiona, normaliza y filtra imagenes. Guarda resultados en data/processed/
-
-3. Exploracion inicial
-
-Abrir y ejecutar el notebook notebooks/EDA_basico.ipynb
-
-4. Entrenamiento del modelo
-
-        python src/entrenamiento_yolov8.py
-
-Entrena YOLOv8s con transferencia de aprendizaje sobre el dataset etiquetado.
-## Resultados esperados
-
-El pipeline genera los siguientes resultados minimos:
-
-- Resumen estadistico del dataset: numero de imagenes por clase y distribucion de tamaños
-- Graficas de distribucion de imagenes infestadas vs sanas
-- Metricas iniciales del modelo: precision, recall, F1-score y mAP@0.5
-- Logs de entrenamiento guardados en logs/
-
-*Resultados disponibles a partir de: Abril 2027*
-## Fuentes del Dataset
-
-### Dataset primario — captura propia en campo
-
-Imagenes capturadas directamente en el Bosque El Olivar, San Isidro, Lima, Peru.
-Registro de georreferenciacion por imagen. Condiciones reales de campo.
-Total actual: 53 imagenes propias.
-
-### Dataset complementario — fuente publica
-
-Para ampliar el volumen del dataset se utilizara como complemento el siguiente conjunto de datos publico:
-
-- Nombre: Pest Dataset V2
-- Fuente: Kaggle
-- Autor: Ibrahima Gabar Diop
-- Enlace: https://www.kaggle.com/datasets/ibrahimagabardiop/pestaidatasetv2
-- Licencia: CC0 Dominio publico
-- Clases relevantes para este proyecto: mosca blanca
-- Total de archivos: 34,200 imagenes en 16 clases
-
-Solo se utilizaran las imagenes correspondientes a la clase mosca blanca como complemento al dataset primario capturado en campo.
+**Autora:** Ing. Agrónoma Gabriela Graciela Villegas Vasquez  
+**Especialista en Cultivo de Olivo – Bosque El Olivar, Municipalidad de San Isidro**  
+**Maestría en Ciencias con Mención en Inteligencia Artificial – UNI**
